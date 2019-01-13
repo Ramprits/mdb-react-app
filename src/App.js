@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import {
   Navbar,
   NavbarBrand,
@@ -6,8 +7,7 @@ import {
   NavbarToggler,
   Collapse,
   NavItem,
-  Footer,
-  NavLink
+  Footer
 } from "mdbreact";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
