@@ -1,49 +1,45 @@
 import React, { Component } from "react";
-import {
-  MDBContainer,
-  MDBRow,
-  MDBIcon,
-  MDBCol,
-  MDBInput,
-  MDBBtn,
-  Card
-} from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, Card, CardBody } from "mdbreact";
 export default class Login extends Component {
   render() {
     return (
-      <MDBContainer className="my-3">
+      <MDBContainer>
         <MDBRow>
-          <MDBCol md="6" xs="12" className="offset-md-3">
-            <Card className="mx-5">
-              <form style={{ padding: "1rem" }}>
-                <p className="h5 text-center mb-4">Welcome back!</p>
-                <div className="grey-text">
-                  <MDBInput
-                    label="Your username"
-                    icon="user"
-                    group
-                    type="text"
-                    validate
-                    error="wrong"
-                    success="right"
+          <MDBCol md="6" className="offset-md-3 col-12">
+            <Card>
+              <CardBody>
+                <form>
+                  <p className="h4 text-center mb-4">Sign in</p>
+                  <label
+                    htmlFor="defaultFormLoginEmailEx"
+                    className="grey-text"
+                  >
+                    Your email
+                  </label>
+                  <input
+                    type="email"
+                    id="defaultFormLoginEmailEx"
+                    className="form-control"
                   />
-
-                  <MDBInput
-                    label="Password"
-                    icon="key"
-                    group
-                    type="Password"
-                    validate
-                    error="wrong"
-                    success="right"
+                  <br />
+                  <label
+                    htmlFor="defaultFormLoginPasswordEx"
+                    className="grey-text"
+                  >
+                    Your password
+                  </label>
+                  <input
+                    type="password"
+                    id="defaultFormLoginPasswordEx"
+                    className="form-control"
                   />
-                </div>
-                <div className="text-center">
-                  <MDBBtn outline color="info">
-                    Login <MDBIcon icon="paper-plane-o" className="ml-1" />
-                  </MDBBtn>
-                </div>
-              </form>
+                  <div className="text-center mt-4">
+                    <MDBBtn color="indigo" type="submit">
+                      Login
+                    </MDBBtn>
+                  </div>
+                </form>
+              </CardBody>
             </Card>
           </MDBCol>
         </MDBRow>

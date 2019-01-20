@@ -87,7 +87,9 @@ class App extends Component {
           </Navbar>
           {this.state.collapseID && overlay}
           <main style={{ marginTop: "4rem" }}>
-            <Routes />
+            <div className="mt-4">
+              <Routes />
+            </div>
           </main>
         </div>
       </Router>

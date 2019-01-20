@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBIcon, MDBCol, MDBBtn, Card } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, Card, CardBody } from "mdbreact";
+
 export default class Signup extends Component {
   constructor(props) {
     super(props);
@@ -21,46 +22,67 @@ export default class Signup extends Component {
 
   render() {
     return (
-      <MDBContainer className="my-3">
+      <MDBContainer>
         <MDBRow>
-          <MDBCol md="6" xs="12" className="offset-md-3">
-            <Card className="mx-5">
-              <form
-                style={{ padding: "1rem" }}
-                onSubmit={this.submitHandler}
-                noValidate
-              >
-                <p className="h5 text-center mb-4">Register</p>
-                <div className="grey-text">
+          <MDBCol md="6" className="offset-md-3 col-12">
+            <Card>
+              <CardBody>
+                <form>
+                  <p className="h4 text-center mb-4">Sign up</p>
+                  <label
+                    htmlFor="defaultFormRegisterNameEx"
+                    className="grey-text"
+                  >
+                    Your name
+                  </label>
                   <input
-                    name="username"
                     type="text"
-                    placeholder="username"
-                    className="form-control mb-2"
-                    onChange={this.changeHandler}
+                    id="defaultFormRegisterNameEx"
+                    className="form-control"
                   />
+                  <br />
+                  <label
+                    htmlFor="defaultFormRegisterEmailEx"
+                    className="grey-text"
+                  >
+                    Your email
+                  </label>
                   <input
-                    name="email"
-                    placeholder="email"
                     type="email"
-                    className="form-control mb-2"
-                    onChange={this.changeHandler}
+                    id="defaultFormRegisterEmailEx"
+                    className="form-control"
                   />
-
+                  <br />
+                  <label
+                    htmlFor="defaultFormRegisterConfirmEx"
+                    className="grey-text"
+                  >
+                    Confirm your email
+                  </label>
                   <input
-                    name="password"
-                    className="form-control mb-2"
-                    type="Password"
-                    placeholder="password"
-                    onChange={this.changeHandler}
+                    type="email"
+                    id="defaultFormRegisterConfirmEx"
+                    className="form-control"
                   />
-                </div>
-                <div className="text-center">
-                  <MDBBtn outline type="submit" color="info">
-                    Signup <MDBIcon icon="paper-plane-o" className="ml-1" />
-                  </MDBBtn>
-                </div>
-              </form>
+                  <br />
+                  <label
+                    htmlFor="defaultFormRegisterPasswordEx"
+                    className="grey-text"
+                  >
+                    Your password
+                  </label>
+                  <input
+                    type="password"
+                    id="defaultFormRegisterPasswordEx"
+                    className="form-control"
+                  />
+                  <div className="text-center mt-4">
+                    <MDBBtn color="unique" type="submit">
+                      Register
+                    </MDBBtn>
+                  </div>
+                </form>
+              </CardBody>
             </Card>
           </MDBCol>
         </MDBRow>
